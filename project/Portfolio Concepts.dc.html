@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=Inter+Tight:wght@500;700;800&family=JetBrains+Mono:wght@400;500&family=Geist+Mono:wght@400;500&family=Syne:wght@400;500;600&family=Space+Grotesk:wght@500;700&family=Archivo:wdth,wght@62..125,400..800&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>body{margin:0;background:#D9D7D1;font-family:Inter,system-ui,sans-serif}a{color:inherit}a:hover{color:inherit;opacity:.8}*{box-sizing:border-box}</style>
+</helmet>
+
+<section style="padding:96px;display:flex;flex-direction:column;gap:64px">
+  <div style="display:flex;flex-direction:column;gap:12px;max-width:1440px">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#4A4843">Turn 1 · Hero + motion storyboard · 5 concepts</div>
+    <div style="font-family:'Instrument Serif',serif;font-size:56px;line-height:1.05;color:#141414">Syed Muhammad Hussain — portfolio directions</div>
+    <div style="font-size:16px;line-height:1.5;color:#3A3833;max-width:760px;text-wrap:pretty">Each concept shows the Hero at 1440 and 375 plus a 4-frame storyboard for the whole scroll journey. 3D elements are CSS stand-ins for the WebGL scene; all text is HTML. Pick 1–2 to take through Story, Projects, Case Study and Contact.</div>
+  </div>
+
+  <div style="display:flex;flex-wrap:wrap;gap:140px">
+
+  <!-- ============ 1a FOLIO ============ -->
+  <div id="1a" style="display:flex;flex-direction:column;gap:28px">
+    <div style="display:flex;align-items:center;gap:14px">
+      <span style="font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:500;background:#141414;color:#F2EFE6;padding:6px 12px;border-radius:4px">1a</span>
+      <span style="font-family:'Instrument Serif',serif;font-size:36px;color:#141414">FOLIO — Riso Editorial</span>
+    </div>
+    <div style="display:flex;gap:48px;align-items:flex-start">
+      <!-- desktop -->
+      <div data-screen-label="1a Hero desktop" style="width:1440px;height:900px;position:relative;overflow:hidden;background:#F2EFE6;color:#141414;box-shadow:0 30px 60px rgba(0,0,0,.18)">
+        <sc-if value="{{ showGrid }}" hint-placeholder-val="{{ true }}"><div style="position:absolute;inset:0 64px;background:repeating-linear-gradient(90deg,rgba(20,20,20,.07) 0 1px,transparent 1px calc((100% - 1px)/12));pointer-events:none"></div></sc-if>
+        <div style="position:absolute;left:28px;top:28px;width:18px;height:18px;border-left:1px solid #141414;border-top:1px solid #141414"></div>
+        <div style="position:absolute;right:28px;top:28px;width:18px;height:18px;border-right:1px solid #141414;border-top:1px solid #141414"></div>
+        <div style="position:absolute;left:28px;bottom:28px;width:18px;height:18px;border-left:1px solid #141414;border-bottom:1px solid #141414"></div>
+        <div style="position:absolute;right:28px;bottom:28px;width:18px;height:18px;border-right:1px solid #141414;border-bottom:1px solid #141414"></div>
+        <nav style="position:absolute;left:64px;right:64px;top:48px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #141414;padding-bottom:16px">
+          <div style="display:flex;gap:24px;align-items:baseline">
+            <span style="font-family:'Instrument Serif',serif;font-size:28px">Folio<span style="font-style:italic">/</span>SMH</span>
+            <span style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#5E5B54;letter-spacing:.06em">ISSUE 01 · WEB DEVELOPER</span>
+          </div>
+          <div style="display:flex;gap:32px;align-items:center;font-size:15px;font-weight:500">
+            <a href="#" style="text-decoration:none" style-focus="outline:2px solid #141414;outline-offset:4px">Work</a>
+            <a href="#" style="text-decoration:none" style-focus="outline:2px solid #141414;outline-offset:4px">Story</a>
+            <a href="#" style="text-decoration:none" style-focus="outline:2px solid #141414;outline-offset:4px">Contact</a>
+            <button onClick="{{ toggleMotion }}" aria-pressed="{{ motionOn }}" style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.06em;background:transparent;border:1px solid #141414;border-radius:999px;padding:8px 14px;color:#141414;cursor:pointer;min-height:36px" style-focus="outline:2px solid #141414;outline-offset:3px">{{ motionLabel }}</button>
+          </div>
+        </nav>
+        <div style="position:absolute;left:64px;top:150px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.08em;color:#5E5B54">01 — HERO · FRONT-END / WORDPRESS / SHOPIFY</div>
+        <h1 style="position:absolute;left:58px;top:182px;margin:0;font-family:'Instrument Serif',serif;font-weight:400;font-size:132px;line-height:.94;letter-spacing:-.02em;width:940px">Turning <span style="font-style:italic">ideas</span><br>into high-quality<br>web experiences.</h1>
+        <div style="position:absolute;left:64px;top:600px;width:520px;display:flex;flex-direction:column;gap:28px">
+          <p style="margin:0;font-size:18px;line-height:1.55;text-wrap:pretty">Web developer specialising in Front-End, WordPress and Shopify. Building for the web since 2021 <span style="font-family:'JetBrains Mono',monospace;font-size:13px;background:#B8FF60;color:#141414;padding:1px 5px">[VERIFY: 4+ years]</span>. Open to remote roles and freelance projects.</p>
+          <div style="display:flex;gap:12px">
+            <a href="#" style="text-decoration:none;background:#141414;color:#F2EFE6;font-weight:500;font-size:16px;padding:16px 26px" style-focus="outline:2px solid #141414;outline-offset:4px">Explore Projects</a>
+            <a href="#" style="text-decoration:none;background:#B8FF60;color:#141414;font-weight:500;font-size:16px;padding:16px 26px" style-focus="outline:2px solid #141414;outline-offset:4px">Let's Work Together</a>
+          </div>
+        </div>
+        <div style="position:absolute;left:1000px;top:200px;width:360px;height:480px;perspective:1200px">
+          <div style="position:absolute;left:30px;top:470px;width:320px;height:40px;background:radial-gradient(ellipse at center,rgba(20,20,20,.28),transparent 70%);filter:blur(6px)"></div>
+          <div style="width:100%;height:100%;transform:rotateY(-24deg) rotateX(8deg) rotateZ(-6deg);background:linear-gradient(115deg,#FBFAF5 0%,#F4F2EA 55%,#E2DFD4 100%);box-shadow:24px 30px 40px rgba(20,20,20,.18);border-radius:0 0 40px 0;position:relative">
+            <div style="position:absolute;left:28px;top:28px;font-family:'JetBrains Mono',monospace;font-size:11px;color:#5E5B54">p. 01</div>
+            <div style="position:absolute;left:28px;right:28px;top:60px;height:1px;background:#141414;opacity:.5"></div>
+            <div style="position:absolute;right:0;bottom:0;width:90px;height:90px;background:linear-gradient(135deg,#E9E6DC 0%,#CFCBBF 100%);border-radius:0 0 40px 0"></div>
+          </div>
+        </div>
+        <sc-if value="{{ showNotes }}" hint-placeholder-val="{{ true }}"><div style="position:absolute;left:1000px;top:730px;width:360px;font-family:'JetBrains Mono',monospace;font-size:12px;line-height:1.5;color:#5E5B54">Fig. 1 — WebGL sheet. Corner curls toward cursor; soft cast shadow on the paper ground.</div></sc-if>
+        <div style="position:absolute;left:64px;right:64px;bottom:48px;display:flex;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:12px;color:#5E5B54;border-top:1px solid rgba(20,20,20,.25);padding-top:12px">
+          <span>01 / 04</span><span>Remote · Freelance · Available [VERIFY]</span><span>scroll ↓</span>
+        </div>
+      </div>
+      <!-- mobile -->
+      <div data-screen-label="1a Hero mobile" style="width:375px;height:812px;position:relative;overflow:hidden;background:#F2EFE6;color:#141414;box-shadow:0 30px 60px rgba(0,0,0,.18)">
+        <nav style="position:absolute;left:20px;right:20px;top:20px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #141414;padding-bottom:10px">
+          <span style="font-family:'Instrument Serif',serif;font-size:24px">Folio<span style="font-style:italic">/</span>SMH</span>
+          <div style="display:flex;gap:8px">
+            <button onClick="{{ toggleMotion }}" aria-pressed="{{ motionOn }}" aria-label="Toggle motion" style="font-family:'JetBrains Mono',monospace;font-size:11px;background:transparent;border:1px solid #141414;border-radius:999px;padding:0 12px;height:44px;color:#141414">{{ motionShort }}</button>
+            <button aria-label="Menu" style="width:44px;height:44px;border:1px solid #141414;background:#141414;color:#F2EFE6;font-family:'JetBrains Mono',monospace;font-size:11px">MENU</button>
+          </div>
+        </nav>
+        <div style="position:absolute;left:150px;top:100px;width:170px;height:220px;transform:rotate(-8deg) skewY(4deg);background:linear-gradient(115deg,#FBFAF5,#E2DFD4);box-shadow:14px 18px 26px rgba(20,20,20,.18);border-radius:0 0 26px 0"></div>
+        <div style="position:absolute;left:20px;top:110px;font-family:'JetBrains Mono',monospace;font-size:11px;color:#5E5B54;line-height:1.6">01 — HERO<br>FRONT-END<br>WORDPRESS<br>SHOPIFY</div>
+        <h1 style="position:absolute;left:18px;right:18px;top:360px;margin:0;font-family:'Instrument Serif',serif;font-weight:400;font-size:54px;line-height:.98;letter-spacing:-.01em">Turning <span style="font-style:italic">ideas</span> into high-quality web experiences.</h1>
+        <p style="position:absolute;left:20px;right:20px;top:590px;margin:0;font-size:15px;line-height:1.5">Front-End, WordPress &amp; Shopify developer since 2021 <span style="font-family:'JetBrains Mono',monospace;font-size:11px;background:#B8FF60;padding:0 4px">[VERIFY]</span>.</p>
+        <div style="position:absolute;left:20px;right:20px;top:668px;display:flex;flex-direction:column;gap:8px">
+          <a href="#" style="text-decoration:none;background:#141414;color:#F2EFE6;font-weight:500;height:48px;display:flex;align-items:center;justify-content:center">Explore Projects</a>
+          <a href="#" style="text-decoration:none;background:#B8FF60;color:#141414;font-weight:500;height:48px;display:flex;align-items:center;justify-content:center">Let's Work Together</a>
+        </div>
+        <div style="position:absolute;left:20px;right:20px;bottom:14px;display:flex;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:10px;color:#5E5B54"><span>01 / 04</span><span>scroll bends the sheet ↓</span></div>
+      </div>
+    </div>
+    <!-- storyboard -->
+    <div style="display:flex;gap:20px">
+      <sc-for list="{{ boards.folio }}" as="f" hint-placeholder-count="4">
+        <div style="width:440px;display:flex;flex-direction:column;gap:10px">
+          <div style="height:240px;background:#F2EFE6;position:relative;overflow:hidden;border:1px solid #141414">
+            <div style="position:absolute;left:12px;top:10px;font-family:'JetBrains Mono',monospace;font-size:11px;color:#5E5B54">{{ f.n }} · {{ f.act }}</div>
+            <div style="position:absolute;left:{{ f.x }}px;top:{{ f.y }}px;width:{{ f.w }}px;height:{{ f.h }}px;transform:rotate({{ f.r }}deg);background:linear-gradient(115deg,#FBFAF5,#E2DFD4);box-shadow:10px 12px 18px rgba(20,20,20,.18);border-radius:{{ f.rad }}"></div>
+            <div style="position:absolute;left:{{ f.x2 }}px;top:{{ f.y2 }}px;width:{{ f.w2 }}px;height:{{ f.h2 }}px;transform:rotate({{ f.r2 }}deg);background:#B8FF60;box-shadow:8px 10px 14px rgba(20,20,20,.15)"></div>
+          </div>
+          <div style="font-size:14px;line-height:1.45;color:#141414;text-wrap:pretty">{{ f.cap }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+
+  <!-- ============ 1b PRISM ============ -->
+  <div id="1b" style="display:flex;flex-direction:column;gap:28px">
+    <div style="display:flex;align-items:center;gap:14px">
+      <span style="font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:500;background:#141414;color:#F2EFE6;padding:6px 12px;border-radius:4px">1b</span>
+      <span style="font-family:'Instrument Serif',serif;font-size:36px;color:#141414">PRISM — Optical Minimalism</span>
+    </div>
+    <div style="display:flex;gap:48px;align-items:flex-start">
+      <div data-screen-label="1b Hero desktop" style="width:1440px;height:900px;position:relative;overflow:hidden;background:#0A0A0D;color:#F4F4F0;box-shadow:0 30px 60px rgba(0,0,0,.25)">
+        <nav style="position:absolute;left:80px;right:80px;top:40px;display:flex;justify-content:space-between;align-items:center">
+          <span style="font-family:Syne,sans-serif;font-weight:500;font-size:15px;letter-spacing:.3em">S · M · HUSSAIN</span>
+          <div style="display:flex;gap:40px;align-items:center;font-size:14px;letter-spacing:.06em;color:#C9C9C2">
+            <a href="#" style="text-decoration:none" style-focus="outline:1px solid #B8FF60;outline-offset:6px">Work</a>
+            <a href="#" style="text-decoration:none" style-focus="outline:1px solid #B8FF60;outline-offset:6px">About</a>
+            <a href="#" style="text-decoration:none" style-focus="outline:1px solid #B8FF60;outline-offset:6px">Contact</a>
+            <button onClick="{{ toggleMotion }}" aria-pressed="{{ motionOn }}" style="font-family:'JetBrains Mono',monospace;font-size:12px;background:transparent;border:1px solid rgba(244,244,240,.35);border-radius:999px;padding:8px 14px;color:#F4F4F0;cursor:pointer;min-height:36px" style-focus="outline:1px solid #B8FF60;outline-offset:3px">{{ motionLabel }}</button>
+          </div>
+        </nav>
+        <div style="position:absolute;left:80px;right:80px;top:96px;height:1px;background:rgba(244,244,240,.12)"></div>
+        <!-- beams -->
+        <div style="position:absolute;left:-40px;top:302px;width:900px;height:2px;background:#B8FF60;box-shadow:0 0 14px 2px rgba(184,255,96,.6);transform-origin:right center;transform:rotate(-9deg);opacity:.9"></div>
+        <div style="position:absolute;left:1012px;top:250px;width:520px;height:2px;background:#B8FF60;box-shadow:0 0 14px 2px rgba(184,255,96,.55);transform-origin:left center;transform:rotate(-6deg)"></div>
+        <div style="position:absolute;left:1012px;top:262px;width:520px;height:2px;background:#7FE7FF;box-shadow:0 0 14px 2px rgba(127,231,255,.55);transform-origin:left center;transform:rotate(9deg)"></div>
+        <div style="position:absolute;left:1012px;top:274px;width:520px;height:2px;background:#FFB86B;box-shadow:0 0 14px 2px rgba(255,184,107,.55);transform-origin:left center;transform:rotate(24deg)"></div>
+        <div style="position:absolute;left:830px;top:130px;width:260px;height:240px;clip-path:polygon(50% 0,100% 100%,0 100%);background:linear-gradient(160deg,rgba(244,244,240,.55),rgba(244,244,240,.12));transform:rotate(-4deg)"></div>
+        <div style="position:absolute;left:833px;top:134px;width:254px;height:234px;clip-path:polygon(50% 1.5%,98.8% 99.4%,1.2% 99.4%);background:linear-gradient(160deg,#1A1A22 0%,#0D0D12 60%,#14141B 100%);transform:rotate(-4deg)"></div>
+        <div style="position:absolute;left:1290px;top:192px;font-family:'JetBrains Mono',monospace;font-size:12px;color:#B8FF60;letter-spacing:.1em">FRONT-END</div>
+        <div style="position:absolute;left:1290px;top:318px;font-family:'JetBrains Mono',monospace;font-size:12px;color:#7FE7FF;letter-spacing:.1em">WORDPRESS</div>
+        <div style="position:absolute;left:1250px;top:440px;font-family:'JetBrains Mono',monospace;font-size:12px;color:#FFB86B;letter-spacing:.1em">SHOPIFY</div>
+        <sc-if value="{{ showNotes }}" hint-placeholder-val="{{ true }}"><div style="position:absolute;left:80px;top:150px;width:280px;font-family:'JetBrains Mono',monospace;font-size:11px;line-height:1.6;color:#9C9C95">Glass prism (WebGL) turns toward cursor; refracted beams sweep the layout. Text sits in beam-free zones.</div></sc-if>
+        <h1 style="position:absolute;left:80px;top:500px;margin:0;font-family:Syne,sans-serif;font-weight:400;font-size:66px;line-height:1.12;letter-spacing:.08em;text-transform:uppercase">Turning ideas into<br>high-quality<br>web experiences</h1>
+        <div style="position:absolute;left:80px;top:770px;display:flex;gap:16px;align-items:center">
+          <a href="#" style="text-decoration:none;border:1px solid #B8FF60;color:#B8FF60;font-size:15px;letter-spacing:.06em;padding:15px 26px" style-focus="outline:1px solid #F4F4F0;outline-offset:4px">Explore Projects</a>
+          <a href="#" style="text-decoration:none;color:#F4F4F0;font-size:15px;letter-spacing:.06em;padding:15px 8px;border-bottom:1px solid rgba(244,244,240,.4)" style-focus="outline:1px solid #B8FF60;outline-offset:4px">Let's Work Together →</a>
+        </div>
+        <div style="position:absolute;right:80px;top:640px;width:360px;font-size:16px;line-height:1.6;color:#C9C9C2;text-wrap:pretty">Web developer — Front-End, WordPress, Shopify. Building for the web since 2021 <span style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#B8FF60">[VERIFY: 4+ years]</span>. Remote roles &amp; freelance.</div>
+        <div style="position:absolute;left:80px;right:80px;bottom:36px;display:flex;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:11px;color:#8E8E88;letter-spacing:.1em"><span>01 / 04</span><span>SCROLL TO SPLIT THE BEAM</span></div>
+      </div>
+      <div data-screen-label="1b Hero mobile" style="width:375px;height:812px;position:relative;overflow:hidden;background:#0A0A0D;color:#F4F4F0;box-shadow:0 30px 60px rgba(0,0,0,.25)">
+        <nav style="position:absolute;left:20px;right:20px;top:20px;display:flex;justify-content:space-between;align-items:center">
+          <span style="font-family:Syne,sans-serif;font-size:12px;letter-spacing:.3em">S·M·HUSSAIN</span>
+          <div style="display:flex;gap:8px">
+            <button onClick="{{ toggleMotion }}" aria-pressed="{{ motionOn }}" aria-label="Toggle motion" style="font-family:'JetBrains Mono',monospace;font-size:11px;background:transparent;border:1px solid rgba(244,244,240,.35);border-radius:999px;padding:0 12px;height:44px;color:#F4F4F0">{{ motionShort }}</button>
+            <button aria-label="Menu" style="width:44px;height:44px;border:1px solid rgba(244,244,240,.35);background:transparent;color:#F4F4F0;font-size:18px">≡</button>
+          </div>
+        </nav>
+        <div style="position:absolute;left:186px;top:80px;width:2px;height:60px;background:#B8FF60;box-shadow:0 0 10px 2px rgba(184,255,96,.6)"></div>
+        <div style="position:absolute;left:127px;top:132px;width:120px;height:110px;clip-path:polygon(50% 0,100% 100%,0 100%);background:linear-gradient(160deg,rgba(244,244,240,.55),rgba(244,244,240,.12))"></div>
+        <div style="position:absolute;left:129px;top:135px;width:116px;height:106px;clip-path:polygon(50% 1.5%,98.5% 99%,1.5% 99%);background:linear-gradient(160deg,#1A1A22,#0D0D12)"></div>
+        <div style="position:absolute;left:160px;top:240px;width:2px;height:600px;background:#B8FF60;box-shadow:0 0 10px rgba(184,255,96,.5);transform-origin:top;transform:rotate(14deg);opacity:.7"></div>
+        <div style="position:absolute;left:187px;top:240px;width:2px;height:600px;background:#7FE7FF;box-shadow:0 0 10px rgba(127,231,255,.5);opacity:.5"></div>
+        <div style="position:absolute;left:214px;top:240px;width:2px;height:600px;background:#FFB86B;box-shadow:0 0 10px rgba(255,184,107,.5);transform-origin:top;transform:rotate(-14deg);opacity:.7"></div>
+        <div style="position:absolute;left:0;right:0;top:330px;bottom:0;background:linear-gradient(rgba(10,10,13,0),rgba(10,10,13,.92) 22%)"></div>
+        <h1 style="position:absolute;left:20px;right:20px;top:400px;margin:0;font-family:Syne,sans-serif;font-weight:400;font-size:30px;line-height:1.2;letter-spacing:.07em;text-transform:uppercase">Turning ideas into high-quality web experiences</h1>
+        <p style="position:absolute;left:20px;right:20px;top:560px;margin:0;font-size:15px;line-height:1.55;color:#C9C9C2"><span style="color:#B8FF60">Front-End</span> · <span style="color:#7FE7FF">WordPress</span> · <span style="color:#FFB86B">Shopify</span><br>Building for the web since 2021 [VERIFY].</p>
+        <div style="position:absolute;left:20px;right:20px;top:660px;display:flex;flex-direction:column;gap:8px">
+          <a href="#" style="text-decoration:none;border:1px solid #B8FF60;color:#B8FF60;height:48px;display:flex;align-items:center;justify-content:center;letter-spacing:.06em">Explore Projects</a>
+          <a href="#" style="text-decoration:none;border:1px solid rgba(244,244,240,.35);color:#F4F4F0;height:48px;display:flex;align-items:center;justify-content:center;letter-spacing:.06em">Let's Work Together</a>
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;gap:20px">
+      <sc-for list="{{ boards.prism }}" as="f" hint-placeholder-count="4">
+        <div style="width:440px;display:flex;flex-direction:column;gap:10px">
+          <div style="height:240px;background:#0A0A0D;position:relative;overflow:hidden">
+            <div style="position:absolute;left:12px;top:10px;font-family:'JetBrains Mono',monospace;font-size:11px;color:#9C9C95">{{ f.n }} · {{ f.act }}</div>
+            <div style="position:absolute;left:{{ f.x }}px;top:{{ f.y }}px;width:60px;height:54px;clip-path:polygon(50% 0,100% 100%,0 100%);background:linear-gradient(160deg,rgba(244,244,240,.6),rgba(244,244,240,.12));opacity:{{ f.po }}"></div>
+            <div style="position:absolute;left:{{ f.bx }}px;top:120px;width:{{ f.bw }}px;height:2px;background:#B8FF60;box-shadow:0 0 10px rgba(184,255,96,.7);transform-origin:left;transform:rotate({{ f.a1 }}deg)"></div>
+            <div style="position:absolute;left:{{ f.bx }}px;top:120px;width:{{ f.bw }}px;height:2px;background:#7FE7FF;box-shadow:0 0 10px rgba(127,231,255,.7);transform-origin:left;transform:rotate({{ f.a2 }}deg)"></div>
+            <div style="position:absolute;left:{{ f.bx }}px;top:120px;width:{{ f.bw }}px;height:2px;background:#FFB86B;box-shadow:0 0 10px rgba(255,184,107,.7);transform-origin:left;transform:rotate({{ f.a3 }}deg)"></div>
+          </div>
+          <div style="font-size:14px;line-height:1.45;color:#141414;text-wrap:pretty">{{ f.cap }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+
+  <!-- ============ 1c TERRAIN ============ -->
+  <div id="1c" style="display:flex;flex-direction:column;gap:28px">
+    <div style="display:flex;align-items:center;gap:14px">
+      <span style="font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:500;background:#141414;color:#F2EFE6;padding:6px 12px;border-radius:4px">1c</span>
+      <span style="font-family:'Instrument Serif',serif;font-size:36px;color:#141414">TERRAIN — Kinetic Neo-Swiss</span>
+    </div>
+    <div style="display:flex;gap:48px;align-items:flex-start">
+      <div data-screen-label="1c Hero desktop" style="width:1440px;height:900px;position:relative;overflow:hidden;background:#101014;color:#EDEDE8;box-shadow:0 30px 60px rgba(0,0,0,.25)">
+        <sc-for list="{{ fieldDesk }}" as="b" hint-placeholder-count="0">
+          <div style="position:absolute;left:{{ b.x }}px;top:{{ b.y }}px;width:{{ b.w }}px;height:{{ b.h }}px;background:{{ b.bg }};border-top:{{ b.cap }}"></div>
+        </sc-for>
+        <div style="position:absolute;left:0;right:0;top:0;height:560px;background:linear-gradient(#101014 62%,rgba(16,16,20,0))"></div>
+        <sc-if value="{{ showGrid }}" hint-placeholder-val="{{ true }}"><div style="position:absolute;inset:0 48px;background:repeating-linear-gradient(90deg,rgba(237,237,232,.06) 0 1px,transparent 1px calc((100% - 1px)/12));pointer-events:none"></div></sc-if>
+        <nav style="position:absolute;left:48px;right:48px;top:32px;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:0;font-family:'Geist Mono',monospace;font-size:13px;align-items:center">
+          <span style="grid-column:1 / 4;font-weight:500">S.M. HUSSAIN</span>
+          <span style="grid-column:4 / 7;color:#A3A3AC">Web Developer — FE / WP / Shopify</span>
+          <a href="#" style="grid-column:8;text-decoration:none" style-focus="outline:2px solid #B8FF60;outline-offset:4px">Work</a>
+          <a href="#" style="grid-column:9;text-decoration:none" style-focus="outline:2px solid #B8FF60;outline-offset:4px">About</a>
+          <a href="#" style="grid-column:10;text-decoration:none" style-focus="outline:2px solid #B8FF60;outline-offset:4px">Contact</a>
+          <button onClick="{{ toggleMotion }}" aria-pressed="{{ motionOn }}" style="grid-column:11 / 13;justify-self:end;font-family:'Geist Mono',monospace;font-size:12px;background:transparent;border:1px solid #A3A3AC;padding:8px 12px;color:#EDEDE8;cursor:pointer;min-height:36px" style-focus="outline:2px solid #B8FF60;outline-offset:3px">{{ motionLabel }}</button>
+        </nav>
+        <div style="position:absolute;left:48px;top:112px;font-family:'Geist Mono',monospace;font-size:13px;color:#A3A3AC">01 — Hero</div>
+        <h1 style="position:absolute;left:40px;top:136px;margin:0;font-family:'Inter Tight',sans-serif;font-weight:800;font-size:158px;line-height:.86;letter-spacing:-.055em;width:1500px">Turning ideas<br>into high-quality<br>web experiences.</h1>
+        <div style="position:absolute;left:48px;right:48px;top:592px;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));font-family:'Geist Mono',monospace;font-size:13px;line-height:1.6;border-top:1px solid rgba(237,237,232,.25);padding-top:14px">
+          <div style="grid-column:1 / 4"><div style="color:#A3A3AC">Role</div>Web Developer</div>
+          <div style="grid-column:4 / 7"><div style="color:#A3A3AC">Stack</div>WordPress · Shopify · React</div>
+          <div style="grid-column:7 / 9"><div style="color:#A3A3AC">Since</div>2021 [VERIFY]</div>
+          <div style="grid-column:9 / 13;display:flex;gap:8px;justify-content:flex-end;align-items:flex-start">
+            <a href="#" style="text-decoration:none;background:#B8FF60;color:#101014;font-family:'Inter Tight',sans-serif;font-weight:700;font-size:15px;padding:14px 20px" style-focus="outline:2px solid #EDEDE8;outline-offset:3px">Explore Projects</a>
+            <a href="#" style="text-decoration:none;border:1px solid #EDEDE8;font-family:'Inter Tight',sans-serif;font-weight:700;font-size:15px;padding:13px 20px" style-focus="outline:2px solid #B8FF60;outline-offset:3px">Let's Work Together</a>
+          </div>
+        </div>
+        <sc-if value="{{ showNotes }}" hint-placeholder-val="{{ true }}"><div style="position:absolute;left:48px;bottom:24px;font-family:'Geist Mono',monospace;font-size:11px;color:#A3A3AC;background:#101014;padding:4px 8px">FIELD — 48×14 instanced columns · cursor ripple, lime crest</div></sc-if>
+      </div>
+      <div data-screen-label="1c Hero mobile" style="width:375px;height:812px;position:relative;overflow:hidden;background:#101014;color:#EDEDE8;box-shadow:0 30px 60px rgba(0,0,0,.25)">
+        <sc-for list="{{ fieldMob }}" as="b" hint-placeholder-count="0">
+          <div style="position:absolute;left:{{ b.x }}px;top:{{ b.y }}px;width:{{ b.w }}px;height:{{ b.h }}px;background:{{ b.bg }};border-top:{{ b.cap }}"></div>
+        </sc-for>
+        <div style="position:absolute;left:0;right:0;top:0;height:560px;background:linear-gradient(#101014 75%,rgba(16,16,20,0))"></div>
+        <nav style="position:absolute;left:16px;right:16px;top:16px;display:flex;justify-content:space-between;align-items:center;font-family:'Geist Mono',monospace;font-size:12px">
+          <span>S.M. HUSSAIN</span>
+          <div style="display:flex;gap:6px">
+            <button onClick="{{ toggleMotion }}" aria-pressed="{{ motionOn }}" aria-label="Toggle motion" style="font-family:'Geist Mono',monospace;font-size:11px;background:transparent;border:1px solid #A3A3AC;padding:0 10px;height:44px;color:#EDEDE8">{{ motionShort }}</button>
+            <button aria-label="Menu" style="width:44px;height:44px;border:1px solid #A3A3AC;background:transparent;color:#EDEDE8;font-family:'Geist Mono',monospace;font-size:11px">☰</button>
+          </div>
+        </nav>
+        <div style="position:absolute;left:16px;top:96px;font-family:'Geist Mono',monospace;font-size:12px;color:#A3A3AC">01 — Hero</div>
+        <h1 style="position:absolute;left:12px;top:118px;margin:0;font-family:'Inter Tight',sans-serif;font-weight:800;font-size:60px;line-height:.88;letter-spacing:-.055em;width:400px">Turning ideas into high-quality web experi&shy;ences.</h1>
+        <div style="position:absolute;left:16px;right:16px;top:398px;display:grid;grid-template-columns:1fr 1fr;gap:10px;font-family:'Geist Mono',monospace;font-size:12px;line-height:1.5;border-top:1px solid rgba(237,237,232,.25);padding-top:10px">
+          <div><div style="color:#A3A3AC">Role</div>Web Developer</div>
+          <div><div style="color:#A3A3AC">Stack</div>WP · Shopify · React</div>
+        </div>
+        <div style="position:absolute;left:16px;right:16px;top:480px;display:flex;flex-direction:column;gap:8px">
+          <a href="#" style="text-decoration:none;background:#B8FF60;color:#101014;font-family:'Inter Tight',sans-serif;font-weight:700;height:48px;display:flex;align-items:center;padding:0 16px">Explore Projects →</a>
+          <a href="#" style="text-decoration:none;border:1px solid #EDEDE8;font-family:'Inter Tight',sans-serif;font-weight:700;height:48px;display:flex;align-items:center;padding:0 16px">Let's Work Together</a>
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;gap:20px">
+      <sc-for list="{{ boards.terrain }}" as="f" hint-placeholder-count="4">
+        <div style="width:440px;display:flex;flex-direction:column;gap:10px">
+          <div style="height:240px;background:#101014;position:relative;overflow:hidden;display:flex;align-items:flex-end;gap:4px;padding:0 16px 16px">
+            <div style="position:absolute;left:12px;top:10px;font-family:'Geist Mono',monospace;font-size:11px;color:#A3A3AC">{{ f.n }} · {{ f.act }}</div>
+            <sc-for list="{{ f.bars }}" as="h" hint-placeholder-count="0">
+              <div style="flex:1;height:{{ h.v }}px;background:{{ h.c }}"></div>
+            </sc-for>
+          </div>
+          <div style="font-size:14px;line-height:1.45;color:#141414;text-wrap:pretty">{{ f.cap }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+
+  <!-- ============ 1d COMPILE ============ -->
+  <div id="1d" style="display:flex;flex-direction:column;gap:28px">
+    <div style="display:flex;align-items:center;gap:14px">
+      <span style="font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:500;background:#141414;color:#F2EFE6;padding:6px 12px;border-radius:4px">1d</span>
+      <span style="font-family:'Instrument Serif',serif;font-size:36px;color:#141414">COMPILE — Blueprint Brutalism</span>
+    </div>
+    <div style="display:flex;gap:48px;align-items:flex-start">
+      <div data-screen-label="1d Hero desktop" style="width:1440px;height:900px;position:relative;overflow:hidden;background:#101014;color:#EDEDE6;box-shadow:0 30px 60px rgba(0,0,0,.25)">
+        <sc-if value="{{ showGrid }}" hint-placeholder-val="{{ true }}"><div style="position:absolute;inset:0;background-image:linear-gradient(#2A2A33 1px,transparent 1px),linear-gradient(90deg,#2A2A33 1px,transparent 1px);background-size:80px 80px;background-position:-1px -1px"></div></sc-if>
+        <nav style="position:absolute;left:80px;right:80px;top:28px;height:52px;display:flex;justify-content:space-between;align-items:center;font-family:'JetBrains Mono',monospace;font-size:13px;background:#101014;border:1px solid #3A3A45;padding:0 16px">
+          <span><span style="color:#B8FF60">~/</span>smhussain</span>
+          <div style="display:flex;gap:28px;align-items:center">
+            <a href="#" style="text-decoration:none" style-focus="outline:2px solid #B8FF60;outline-offset:4px">./work</a>
+            <a href="#" style="text-decoration:none" style-focus="outline:2px solid #B8FF60;outline-offset:4px">./about</a>
+            <a href="#" style="text-decoration:none" style-focus="outline:2px solid #B8FF60;outline-offset:4px">./contact</a>
+            <button onClick="{{ toggleMotion }}" aria-pressed="{{ motionOn }}" style="font-family:'JetBrains Mono',monospace;font-size:12px;background:transparent;border:1px solid #EDEDE6;padding:6px 12px;color:#EDEDE6;cursor:pointer;min-height:34px" style-focus="outline:2px solid #B8FF60;outline-offset:3px">{{ motionLabel }}</button>
+          </div>
+        </nav>
+        <div style="position:absolute;left:820px;top:170px;width:500px;height:440px;border-radius:90px;background-image:radial-gradient(circle,#EDEDE6 1.3px,transparent 1.8px);background-size:13px 13px;transform:perspective(1200px) rotateY(-28deg) rotateX(14deg);opacity:.55"></div>
+        <div style="position:absolute;left:1000px;top:300px;width:230px;height:200px;border-radius:0 60px 0 0;background:linear-gradient(140deg,#D4FF9C,#B8FF60 50%,#86C83E);transform:perspective(1200px) rotateY(-28deg) rotateX(14deg);box-shadow:0 0 60px rgba(184,255,96,.25)"></div>
+        <div style="position:absolute;left:1110px;top:390px;width:22px;height:22px;border:2px solid #101014;border-radius:50%"></div>
+        <sc-if value="{{ showNotes }}" hint-placeholder-val="{{ true }}">
+          <div style="position:absolute;left:820px;top:650px;width:500px;height:1px;background:#FFC857"></div>
+          <div style="position:absolute;left:820px;top:644px;width:1px;height:13px;background:#FFC857"></div>
+          <div style="position:absolute;left:1319px;top:644px;width:1px;height:13px;background:#FFC857"></div>
+          <div style="position:absolute;left:820px;top:664px;font-family:'JetBrains Mono',monospace;font-size:12px;color:#FFC857">// slab: 12k points · r=120 → faces snap solid within cursor radius</div>
+          <div style="position:absolute;left:1240px;top:252px;font-family:'JetBrains Mono',monospace;font-size:12px;color:#FFC857">┌ compiled: 23%</div>
+        </sc-if>
+        <div style="position:absolute;left:80px;top:150px;font-family:'JetBrains Mono',monospace;font-size:12px;color:#9A9AA3">&lt;h1&gt; · 01/04 · x:080 y:150</div>
+        <h1 style="position:absolute;left:76px;top:180px;margin:0;width:760px;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:104px;line-height:.95;letter-spacing:-.035em">Turning <span style="font-family:'JetBrains Mono',monospace;font-weight:400;font-size:88px;letter-spacing:-.04em;color:#B8FF60">ideas</span> into high-quality web experiences.</h1>
+        <div style="position:absolute;left:80px;top:640px;width:600px;display:flex;flex-direction:column;gap:24px">
+          <p style="margin:0;font-size:17px;line-height:1.6;color:#CFCFC8;text-wrap:pretty">Web developer — Front-End, WordPress, Shopify. Shipping sites since 2021 <span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#FFC857">[VERIFY: 4+ years]</span>. Available for remote roles and freelance builds.</p>
+          <div style="display:flex;gap:12px">
+            <a href="#" style="text-decoration:none;background:#B8FF60;color:#101014;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:16px;padding:15px 24px" style-focus="outline:2px solid #EDEDE6;outline-offset:3px">Explore Projects</a>
+            <a href="#" style="text-decoration:none;border:1px solid #EDEDE6;font-family:'JetBrains Mono',monospace;font-size:14px;padding:15px 22px" style-focus="outline:2px solid #B8FF60;outline-offset:3px">$ lets-work-together</a>
+          </div>
+        </div>
+        <div style="position:absolute;left:80px;right:80px;bottom:28px;display:flex;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:11px;color:#9A9AA3"><span>BUILD 01 — HERO</span><span>scroll ↓ to compile</span></div>
+      </div>
+      <div data-screen-label="1d Hero mobile" style="width:375px;height:812px;position:relative;overflow:hidden;background:#101014;color:#EDEDE6;box-shadow:0 30px 60px rgba(0,0,0,.25)">
+        <div style="position:absolute;inset:0;background-image:linear-gradient(#2A2A33 1px,transparent 1px),linear-gradient(90deg,#2A2A33 1px,transparent 1px);background-size:47px 47px"></div>
+        <nav style="position:absolute;left:12px;right:12px;top:12px;display:flex;justify-content:space-between;align-items:center;font-family:'JetBrains Mono',monospace;font-size:12px;background:#101014;border:1px solid #3A3A45;padding:0 0 0 12px">
+          <span><span style="color:#B8FF60">~/</span>smh</span>
+          <div style="display:flex">
+            <button onClick="{{ toggleMotion }}" aria-pressed="{{ motionOn }}" aria-label="Toggle motion" style="font-family:'JetBrains Mono',monospace;font-size:11px;background:transparent;border:0;border-left:1px solid #3A3A45;padding:0 12px;height:44px;color:#EDEDE6">{{ motionShort }}</button>
+            <button aria-label="Menu" style="width:44px;height:44px;border:0;border-left:1px solid #3A3A45;background:transparent;color:#EDEDE6;font-family:'JetBrains Mono',monospace">≡</button>
+          </div>
+        </nav>
+        <div style="position:absolute;left:110px;top:90px;width:220px;height:200px;border-radius:50px;background-image:radial-gradient(circle,#EDEDE6 1.2px,transparent 1.7px);background-size:12px 12px;transform:rotate(-8deg);opacity:.45"></div>
+        <div style="position:absolute;left:200px;top:160px;width:100px;height:90px;border-radius:0 30px 0 0;background:linear-gradient(140deg,#D4FF9C,#B8FF60 50%,#86C83E);transform:rotate(-8deg)"></div>
+        <div style="position:absolute;left:16px;top:300px;font-family:'JetBrains Mono',monospace;font-size:11px;color:#9A9AA3">&lt;h1&gt; · 01/04</div>
+        <h1 style="position:absolute;left:14px;right:14px;top:320px;margin:0;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:44px;line-height:.98;letter-spacing:-.03em;background:#101014">Turning <span style="font-family:'JetBrains Mono',monospace;font-weight:400;font-size:38px;color:#B8FF60">ideas</span> into high-quality web experiences.</h1>
+        <p style="position:absolute;left:16px;right:16px;top:540px;margin:0;font-size:15px;line-height:1.55;color:#CFCFC8;background:#101014">Front-End · WordPress · Shopify. Since 2021 <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#FFC857">[VERIFY]</span>.</p>
+        <div style="position:absolute;left:16px;right:16px;top:640px;display:flex;flex-direction:column;gap:8px">
+          <a href="#" style="text-decoration:none;background:#B8FF60;color:#101014;font-family:'Space Grotesk',sans-serif;font-weight:700;height:48px;display:flex;align-items:center;justify-content:center">Explore Projects</a>
+          <a href="#" style="text-decoration:none;border:1px solid #EDEDE6;background:#101014;font-family:'JetBrains Mono',monospace;font-size:14px;height:48px;display:flex;align-items:center;justify-content:center">$ lets-work-together</a>
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;gap:20px">
+      <sc-for list="{{ boards.compile }}" as="f" hint-placeholder-count="4">
+        <div style="width:440px;display:flex;flex-direction:column;gap:10px">
+          <div style="height:240px;background:#101014;position:relative;overflow:hidden;background-image:linear-gradient(#2A2A33 1px,transparent 1px),linear-gradient(90deg,#2A2A33 1px,transparent 1px);background-size:40px 40px">
+            <div style="position:absolute;left:12px;top:10px;font-family:'JetBrains Mono',monospace;font-size:11px;color:#9A9AA3;background:#101014">{{ f.n }} · {{ f.act }}</div>
+            <div style="position:absolute;left:120px;top:50px;width:200px;height:150px;border-radius:36px;background-image:radial-gradient(circle,#EDEDE6 1.1px,transparent 1.6px);background-size:10px 10px;opacity:.55"></div>
+            <div style="position:absolute;left:120px;top:50px;width:{{ f.pct }}px;height:150px;border-radius:36px 0 0 36px;background:#B8FF60"></div>
+            <div style="position:absolute;right:14px;bottom:12px;font-family:'JetBrains Mono',monospace;font-size:11px;color:#FFC857">// {{ f.note }}</div>
+          </div>
+          <div style="font-size:14px;line-height:1.45;color:#141414;text-wrap:pretty">{{ f.cap }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+
+  <!-- ============ 1e MAQUETTE ============ -->
+  <div id="1e" style="display:flex;flex-direction:column;gap:28px">
+    <div style="display:flex;align-items:center;gap:14px">
+      <span style="font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:500;background:#141414;color:#F2EFE6;padding:6px 12px;border-radius:4px">1e</span>
+      <span style="font-family:'Instrument Serif',serif;font-size:36px;color:#141414">MAQUETTE — Architectural Model</span>
+    </div>
+    <div style="display:flex;gap:48px;align-items:flex-start">
+      <div data-screen-label="1e Hero desktop" style="width:1440px;height:900px;position:relative;overflow:hidden;background:#FAFAF7;color:#1C1C20;box-shadow:0 30px 60px rgba(0,0,0,.18)">
+        <div style="position:absolute;left:0;right:0;bottom:0;height:200px;background:#EAE8E3"></div>
+        <nav style="position:absolute;left:72px;right:72px;top:40px;display:flex;justify-content:space-between;align-items:center;font-family:'IBM Plex Mono',monospace;font-size:13px">
+          <span style="font-family:Archivo,sans-serif;font-stretch:70%;font-variation-settings:'wdth' 70;font-weight:700;font-size:20px;letter-spacing:.02em;white-space:nowrap">SYED M. HUSSAIN</span>
+          <div style="display:flex;gap:32px;align-items:center">
+            <a href="#" style="text-decoration:none" style-focus="outline:2px solid #1C1C20;outline-offset:4px">Work</a>
+            <a href="#" style="text-decoration:none" style-focus="outline:2px solid #1C1C20;outline-offset:4px">About</a>
+            <a href="#" style="text-decoration:none" style-focus="outline:2px solid #1C1C20;outline-offset:4px">Contact</a>
+            <button onClick="{{ toggleMotion }}" aria-pressed="{{ motionOn }}" style="font-family:'IBM Plex Mono',monospace;font-size:12px;background:#FAFAF7;border:1px solid #1C1C20;padding:8px 14px;color:#1C1C20;cursor:pointer;min-height:36px" style-focus="outline:2px solid #1C1C20;outline-offset:3px">{{ motionLabel }}</button>
+          </div>
+        </nav>
+        <div style="position:absolute;left:72px;top:150px;width:860px;display:flex;flex-direction:column;gap:0">
+          <sc-for list="{{ floors }}" as="fl" hint-placeholder-count="4">
+            <div style="display:flex;align-items:baseline;gap:22px;border-top:1px solid #C9C6BF;padding-top:6px">
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#5C5A55;width:44px">{{ fl.tag }}</span>
+              <span style="font-family:Archivo,sans-serif;font-stretch:62%;font-variation-settings:'wdth' 62;font-weight:700;font-size:104px;line-height:.92;letter-spacing:-.01em;text-transform:uppercase;white-space:nowrap">{{ fl.text }}</span>
+            </div>
+          </sc-for>
+        </div>
+        <h1 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);margin:0">Turning ideas into high-quality web experiences.</h1>
+        <div style="position:absolute;left:138px;top:640px;width:560px;display:flex;flex-direction:column;gap:22px">
+          <p style="margin:0;font-family:'IBM Plex Sans',sans-serif;font-size:17px;line-height:1.6;text-wrap:pretty">Web developer — Front-End, WordPress and Shopify. Building for the web since 2021 <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;background:#B8FF60;padding:1px 5px">[VERIFY: 4+ years]</span>.</p>
+          <div style="display:flex;gap:10px">
+            <a href="#" style="text-decoration:none;background:#1C1C20;color:#FAFAF7;font-family:'IBM Plex Sans',sans-serif;font-weight:500;padding:15px 24px" style-focus="outline:2px solid #1C1C20;outline-offset:4px">Explore Projects</a>
+            <a href="#" style="text-decoration:none;background:#B8FF60;color:#1C1C20;font-family:'IBM Plex Sans',sans-serif;font-weight:500;padding:15px 24px" style-focus="outline:2px solid #1C1C20;outline-offset:4px">Let's Work Together</a>
+          </div>
+        </div>
+        <!-- tower -->
+        <div style="position:absolute;left:930px;top:690px;width:420px;height:44px;background:#F3F1EC;box-shadow:0 20px 30px rgba(28,28,32,.12)"></div>
+        <div style="position:absolute;left:1000px;top:170px;display:flex;flex-direction:column">
+          <div style="width:350px;height:30px;margin-left:12px;background:#F6F5F1;transform:skewX(-50deg);transform-origin:bottom"></div>
+          <sc-for list="{{ towerFloors }}" as="t" hint-placeholder-count="6">
+            <div style="display:flex">
+              <div style="width:250px;height:84px;background:#FFFFFF;border-bottom:1px solid #DEDBD4;display:flex;gap:8px;align-items:center;padding:0 16px">
+                <sc-for list="{{ t.win }}" as="w" hint-placeholder-count="6"><div style="flex:1;height:34px;background:{{ w.c }}"></div></sc-for>
+              </div>
+              <div style="width:90px;height:84px;background:linear-gradient(90deg,#E6E4DE,#DAD7D0);border-bottom:1px solid #CFCCC4;transform:skewY(-30deg);transform-origin:left top"></div>
+            </div>
+          </sc-for>
+        </div>
+        <sc-if value="{{ showNotes }}" hint-placeholder-val="{{ true }}"><div style="position:absolute;left:930px;top:750px;width:420px;display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:12px;color:#5C5A55"><span>MODEL 1:200 — WebGL tower</span><span>hover → windows lit</span></div></sc-if>
+        <div style="position:absolute;left:72px;right:72px;bottom:32px;display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:12px;color:#5C5A55"><span>LEVEL 04 / ROOF</span><span>N ↑</span><span>scroll to descend ↓</span></div>
+      </div>
+      <div data-screen-label="1e Hero mobile" style="width:375px;height:812px;position:relative;overflow:hidden;background:#FAFAF7;color:#1C1C20;box-shadow:0 30px 60px rgba(0,0,0,.18)">
+        <nav style="position:absolute;left:16px;right:16px;top:16px;display:flex;justify-content:space-between;align-items:center">
+          <span style="font-family:Archivo,sans-serif;font-stretch:70%;font-variation-settings:'wdth' 70;font-weight:700;font-size:18px;white-space:nowrap">S.M. HUSSAIN</span>
+          <div style="display:flex;gap:6px">
+            <button onClick="{{ toggleMotion }}" aria-pressed="{{ motionOn }}" aria-label="Toggle motion" style="font-family:'IBM Plex Mono',monospace;font-size:11px;background:#FAFAF7;border:1px solid #1C1C20;padding:0 10px;height:44px;color:#1C1C20">{{ motionShort }}</button>
+            <button aria-label="Menu" style="width:44px;height:44px;border:0;background:#1C1C20;color:#FAFAF7;font-family:'IBM Plex Mono',monospace;font-size:11px">MENU</button>
+          </div>
+        </nav>
+        <div style="position:absolute;left:0;right:0;top:280px;height:40px;background:#EAE8E3"></div>
+        <div style="position:absolute;left:217px;top:82px;width:130px;display:flex;flex-direction:column;gap:0">
+          <sc-for list="{{ towerFloorsMob }}" as="t" hint-placeholder-count="5">
+            <div style="height:40px;background:#FFFFFF;border-bottom:1px solid #DEDBD4;display:flex;gap:5px;align-items:center;padding:0 8px;box-shadow:6px 0 0 #E2DFD8">
+              <sc-for list="{{ t.win }}" as="w" hint-placeholder-count="4"><div style="flex:1;height:16px;background:{{ w.c }}"></div></sc-for>
+            </div>
+          </sc-for>
+        </div>
+        
+        <div style="position:absolute;left:16px;top:90px;font-family:'IBM Plex Mono',monospace;font-size:11px;line-height:1.7;color:#5C5A55">ELEVATION A<br>1:400<br>4 LEVELS</div>
+        <h1 style="position:absolute;left:16px;right:16px;top:350px;margin:0;font-family:Archivo,sans-serif;font-stretch:62%;font-variation-settings:'wdth' 62;font-weight:700;font-size:52px;line-height:.92;text-transform:uppercase">Turning ideas into high-quality web experiences.</h1>
+        <p style="position:absolute;left:16px;right:16px;top:582px;margin:0;font-family:'IBM Plex Sans',sans-serif;font-size:15px;line-height:1.55">Front-End, WordPress &amp; Shopify developer since 2021 <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;background:#B8FF60;padding:0 4px">[VERIFY]</span>.</p>
+        <div style="position:absolute;left:16px;right:16px;top:660px;display:flex;flex-direction:column;gap:8px">
+          <a href="#" style="text-decoration:none;background:#1C1C20;color:#FAFAF7;font-family:'IBM Plex Sans',sans-serif;font-weight:500;height:48px;display:flex;align-items:center;justify-content:center">Explore Projects</a>
+          <a href="#" style="text-decoration:none;background:#B8FF60;color:#1C1C20;font-family:'IBM Plex Sans',sans-serif;font-weight:500;height:48px;display:flex;align-items:center;justify-content:center">Let's Work Together</a>
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;gap:20px">
+      <sc-for list="{{ boards.maquette }}" as="f" hint-placeholder-count="4">
+        <div style="width:440px;display:flex;flex-direction:column;gap:10px">
+          <div style="height:240px;background:{{ f.bg }};position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center">
+            <div style="position:absolute;left:12px;top:10px;font-family:'IBM Plex Mono',monospace;font-size:11px;color:{{ f.ink }}">{{ f.n }} · {{ f.act }}</div>
+            <div style="display:flex;flex-direction:column;width:{{ f.w }}px">
+              <sc-for list="{{ f.fl }}" as="x" hint-placeholder-count="5"><div style="height:{{ f.fh }}px;background:{{ x.c }};border-bottom:1px solid #CFCCC4"></div></sc-for>
+            </div>
+          </div>
+          <div style="font-size:14px;line-height:1.45;color:#141414;text-wrap:pretty">{{ f.cap }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+
+  </div>
+
+  <div style="display:flex;flex-wrap:wrap;gap:24px;max-width:1440px">
+    <div style="flex:1 1 640px;background:#F2EFE6;padding:36px;display:flex;flex-direction:column;gap:18px">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.08em;color:#4A4843">HEADLINE ALTERNATES — drop into any concept</div>
+      <sc-for list="{{ headlines }}" as="h" hint-placeholder-count="4">
+        <div style="display:grid;grid-template-columns:40px minmax(0,1fr);gap:12px;border-top:1px solid #141414;padding-top:12px">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#4A4843">{{ h.id }}</span>
+          <div style="display:flex;flex-direction:column;gap:4px">
+            <span style="font-family:'Instrument Serif',serif;font-size:34px;line-height:1.1;color:#141414">{{ h.text }}</span>
+            <span style="font-size:14px;color:#3A3833">{{ h.why }}</span>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+    <div style="flex:1 1 480px;background:#141414;color:#F2EFE6;padding:36px;display:flex;flex-direction:column;gap:14px">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.08em;color:#B5B2AA">NEXT</div>
+      <p style="margin:0;font-size:16px;line-height:1.6;text-wrap:pretty">Recommendation for the full build: <a href="#1a" style="color:#B8FF60">1a FOLIO</a> (most legible for recruiters, reads like a CV-as-magazine) and <a href="#1c" style="color:#B8FF60">1c TERRAIN</a> (strongest technical signal; timeline-as-chart is honest data). Contact screens will use:</p>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:13px;line-height:1.9;color:#F2EFE6">muhammad.hussain@ghost-digital.com<br>linkedin.com/in/smh12<br>github.com/SMH73346</div>
+    </div>
+  </div>
+</section>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showGrid&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;},&quot;showNotes&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;}}">
+class Component extends DCLogic {
+  state = { motion: true };
+  field(W, top, rows, base, grow, cx, cy) {
+    const out = [];
+    for (let r = 0; r < rows; r++) {
+      const w = base + r * grow, gap = Math.max(2, w * 0.18), y = top + r * (w * 0.9) + r * r * 1.2;
+      for (let x = -w / 2; x < W; x += w + gap) {
+        const d = Math.hypot(x - cx, (y - cy) * 2.2);
+        const rip = Math.sin(d / 46) * Math.exp(-d / 520);
+        const h = w * 0.5 + Math.max(0, rip) * w * 1.6 + 2;
+        const shade = 30 + r * 4;
+        out.push({ x: Math.round(x), y: Math.round(y - h), w: Math.round(w), h: Math.round(h + w * 0.6),
+          bg: `rgb(${shade},${shade},${shade + 6})`,
+          cap: rip > 0.62 ? '3px solid #B8FF60' : '1px solid #4A4A55' });
+      }
+    }
+    return out;
+  }
+  componentDidMount() {
+    this.fd = this.field(1440, 640, 9, 12, 6, 900, 700);
+    this.fm = this.field(375, 650, 6, 14, 6, 240, 700);
+    this.forceUpdate();
+  }
+  renderVals() {
+    const m = this.state.motion;
+    const bars = (fn) => Array.from({ length: 24 }, (_, i) => fn(i));
+    const win = (n, lit) => Array.from({ length: n }, (_, i) => ({ c: lit.includes(i) ? '#B8FF60' : '#E9E8E3' }));
+    const fl = (n, active, base, act) => Array.from({ length: n }, (_, i) => ({ c: i === active ? act : base }));
+    return {
+      motionOn: m ? 'true' : 'false',
+      motionLabel: m ? 'Motion: On' : 'Motion: Off',
+      motionShort: m ? 'MOTION ON' : 'MOTION OFF',
+      toggleMotion: () => this.setState(s => ({ motion: !s.motion })),
+      showGrid: this.props.showGrid ?? true,
+      showNotes: this.props.showNotes ?? true,
+      fieldDesk: this.fd || [], fieldMob: this.fm || [],
+      floors: [{ tag: 'L4', text: 'Turning ideas' }, { tag: 'L3', text: 'into high-' }, { tag: 'L2', text: 'quality web' }, { tag: 'L1', text: 'experiences.' }],
+      towerFloors: [win(6, []), win(6, [1, 4]), win(6, [2]), win(6, []), win(6, [0, 3, 5]), win(6, [])].map(w => ({ win: w })),
+      towerFloorsMob: [win(4, []), win(4, [1]), win(4, []), win(4, [0, 3]), win(4, [])].map(w => ({ win: w })),
+      headlines: [
+        { id: 'H0', text: 'Turning ideas into high-quality web experiences.', why: 'Draft. Broad, safe; works for both audiences.' },
+        { id: 'H1', text: 'Websites built properly — on WordPress, Shopify and beyond.', why: 'Names the platforms first; recruiters scan for stack.' },
+        { id: 'H2', text: 'From brief to launch, built to last.', why: 'Process-led; speaks to freelance clients.' },
+        { id: 'H3', text: 'Front-end craft for brands that sell and inform.', why: 'Spans Shopify (sell) and WordPress/gov (inform).' }
+      ],
+      boards: {
+        folio: [
+          { n: 'K1', act: '01 Hero', x: 250, y: 40, w: 130, h: 170, r: -8, rad: '0 0 30px 0', x2: 0, y2: 0, w2: 0, h2: 0, r2: 0, cap: 'Sheet floats, corner curls toward the cursor. Shadow softens as it lifts.' },
+          { n: 'K2', act: '02 Story', x: 60, y: 50, w: 150, h: 150, r: -4, rad: '0', x2: 230, y2: 50, w2: 150, h2: 150, r2: 3, cap: 'Sheet fans into spreads — About, Services, Skills, Experience — each a magazine page.' },
+          { n: 'K3', act: '03 Projects', x: 40, y: 140, w: 360, h: 70, r: 0, rad: '0', x2: 270, y2: 36, w2: 120, h2: 150, r2: -6, cap: 'Hovered index row lifts its cover sheet; screenshot printed on paper.' },
+          { n: 'K4', act: '04 Contact', x: 110, y: 70, w: 220, h: 130, r: 0, rad: '0', x2: 110, y2: 70, w2: 220, h2: 64, r2: 0, cap: 'Last sheet folds into an envelope; headline and form sit on it.' }
+        ],
+        prism: [
+          { n: 'K1', act: '01 Hero', x: 150, y: 90, po: 1, bx: 200, bw: 260, a1: -12, a2: 0, a3: 12, cap: 'Lime beam enters prism; refracted beams sweep as it turns to the cursor.' },
+          { n: 'K2', act: '02 Story', x: 30, y: 90, po: .6, bx: 80, bw: 400, a1: -22, a2: 0, a3: 22, cap: 'Beams fan wide; each lands on its discipline section. Timeline runs along one beam.' },
+          { n: 'K3', act: '03 Projects', x: -80, y: 90, po: 0, bx: 0, bw: 440, a1: -4, a2: 0, a3: 4, cap: 'Beams light glass panes in discipline colour; filter chips match.' },
+          { n: 'K4', act: '04 Contact', x: -80, y: 90, po: 0, bx: 60, bw: 320, a1: 0, a2: 0, a3: 0, cap: 'Three beams recombine into one point — the underline of the contact headline.' }
+        ],
+        terrain: [
+          { n: 'K1', act: '01 Hero', bars: bars(i => ({ v: 30 + Math.max(0, Math.sin(i / 2.2)) * 90, c: Math.sin(i / 2.2) > .8 ? '#B8FF60' : '#3A3A44' })), cap: 'Cursor ripple travels through the field; crests flash lime.' },
+          { n: 'K2', act: '02 Story', bars: bars(i => ({ v: [40, 40, 40, 80, 80, 80, 80, 80, 80, 110, 110, 160, 160, 160, 160, 160, 0, 0, 0, 0, 0, 0, 0, 0][i] || 6, c: i >= 11 && i <= 15 ? '#B8FF60' : '#6B6B75' })), cap: 'Columns rise into a career bar chart (years/roles [VERIFY]), then flatten to a skills matrix.' },
+          { n: 'K3', act: '03 Projects', bars: bars(i => ({ v: i >= 9 && i <= 14 ? 120 : 18, c: i >= 9 && i <= 14 ? '#EDEDE8' : '#3A3A44' })), cap: 'Hovered row raises a plinth beneath its preview; camera dollies into the monolith.' },
+          { n: 'K4', act: '04 Contact', bars: bars(i => ({ v: i === 6 ? 150 : 10, c: i === 6 ? '#B8FF60' : '#3A3A44' })), cap: 'Terrain at rest; one lit lime column beneath the email address.' }
+        ],
+        compile: [
+          { n: 'K1', act: '01 Hero', pct: 30, note: 'compiled 15%', cap: 'Point-cloud slab; faces near the cursor snap solid lime.' },
+          { n: 'K2', act: '02 Story', pct: 90, note: 'stage 3/5 build', cap: 'Build log: understand → plan → build → test → deliver; slab compiles per stage.' },
+          { n: 'K3', act: '03 Projects', pct: 150, note: 'wireframe → shot', cap: 'Each preview is a blueprint wireframe that resolves into the real screenshot.' },
+          { n: 'K4', act: '04 Contact', pct: 200, note: 'exit 0', cap: 'Fully compiled; terminal-styled contact block with a real form.' }
+        ],
+        maquette: [
+          { n: 'K1', act: '01 Hero', bg: '#FAFAF7', ink: '#5C5A55', w: 110, fh: 30, fl: fl(5, 1, '#FFFFFF', '#B8FF60'), cap: 'Tower on plinth turns toward cursor; windows glow lime on hover.' },
+          { n: 'K2', act: '02 Story', bg: '#EAE8E3', ink: '#5C5A55', w: 260, fh: 30, fl: fl(5, 2, '#FFFFFF', '#F3F1EC'), cap: 'Camera descends floor by floor; each cut-away floor = a chapter beside HTML.' },
+          { n: 'K3', act: '03 Projects', bg: '#FAFAF7', ink: '#5C5A55', w: 380, fh: 40, fl: fl(4, 0, '#FFFFFF', '#B8FF60'), cap: 'Top-down floor plan; rooms labelled by project; hover lights a room.' },
+          { n: 'K4', act: '04 Contact', bg: '#101014', ink: '#A3A3AC', w: 110, fh: 30, fl: fl(5, 0, '#2A2A31', '#B8FF60'), cap: 'Rooftop at dusk; contact headline and form on dark.' }
+        ]
+      }
+    };
+  }
+}
+</script>
+</body>
+</html>
