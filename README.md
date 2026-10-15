@@ -1,25 +1,71 @@
-# CODING AGENTS: READ THIS FIRST
+# Syed Muhammad Hussain — Portfolio
 
-This is a **handoff bundle** from Claude Design (claude.ai/design).
+A 3D, scroll-driven portfolio built from the Claude Design handoff in `project/Portfolio Concepts.dc.html` (design chat in `chats/`). It uses one persistent WebGL scene (React Three Fiber) behind real HTML content. All headings, text, links and project information are HTML.
 
-A user mocked up designs in HTML/CSS/JS using an AI design tool, then exported this bundle so a coding agent can implement the designs for real.
+All five design directions are implemented and can be switched live:
 
-## What you should do — IMPORTANT
+| Code | Route | Concept | 3D scene |
+| --- | --- | --- | --- |
+| 1a | `/folio` | FOLIO — Riso Editorial | Paper sheet curls toward the cursor → fans into spreads → stack lifts the hovered project's cover → folds into an envelope |
+| 1b | `/prism` | PRISM — Optical Minimalism | Glass prism splits a lime beam into Front-End / WordPress / Shopify → beams fan across Story → light the work → recombine into the contact underline |
+| 1c | `/terrain` | TERRAIN — Kinetic Neo-Swiss | Instanced column field with a lime-crested cursor/tap ripple → career bar chart → plinth under the hovered project → one lit column under the email |
+| 1d | `/compile` | COMPILE — Blueprint Brutalism | Point-cloud slab; faces snap solid lime near the cursor and compile left→right with scroll (live "compiled: N%" read-out) |
+| 1e | `/maquette` | MAQUETTE — Architectural Model | White model tower on a plinth; windows light on hover → descends floor by floor → floor-plan rooms per project → rooftop at dusk |
 
-**Read the chat transcripts first.** There are 1 chat transcript(s) in `chats/`. The transcripts show the full back-and-forth between the user and the design assistant — they tell you **what the user actually wants** and **where they landed** after iterating. Don't skip them. The final HTML files are the output, but the chat is where the intent lives.
+The floating **concept switcher** (bottom right) is a review tool. Hide it with `VITE_HIDE_SWITCHER=1`, or delete it once a direction is chosen.
 
-**Read `project/Portfolio Concepts.dc.html` in full.** The user had this file open when they triggered the handoff, so it's almost certainly the primary design they want built. Read it top to bottom — don't skim. Then **follow its imports**: open every file it pulls in (shared components, CSS, scripts) so you understand how the pieces fit together before you start implementing.
+## Run
 
-**If anything is ambiguous, ask the user to confirm before you start implementing.** It's much cheaper to clarify scope up front than to build the wrong thing.
+```bash
+npm install
+npm run dev        # http://localhost:5173 → redirects to /folio
+npm run build      # type-check + production build into dist/
+npm run preview
+```
 
-## About the design files
+This is a single-page app with client-side routes (`/:concept`, `/:concept/work/:slug`). The static host must rewrite unknown paths to `index.html`.
 
-The design medium is **HTML/CSS/JS** — these are prototypes, not production code. Your job is to **recreate them pixel-perfectly** in whatever technology makes sense for the target codebase (React, Vue, native, whatever fits). Match the visual output; don't copy the prototype's internal structure unless it happens to fit.
+## Structure
 
-**Don't render these files in a browser or take screenshots unless the user asks you to.** Everything you need — dimensions, colors, layout rules — is spelled out in the source. Read the HTML and CSS directly; a screenshot won't tell you anything they don't.
+```
+src/
+  lib/content.ts        all copy: projects, timeline, services, skills, case studies
+  lib/concepts.ts       concept metadata (nav labels, colours)
+  lib/store.ts          scroll/pointer/hover state shared with the WebGL scene
+  lib/motion.tsx        motion toggle (defaults from prefers-reduced-motion, persisted)
+  heroes/Heroes.tsx     the five hero layouts, transcribed from the 1440 + 375 mocks
+  sections/             Story, Projects (featured + index), Contact (accessible form)
+  pages/                Home (4 acts + GSAP reveals), CaseStudy (long-read layout)
+  three/Scene.tsx       persistent <Canvas>; one scene per concept in three/scenes/
+  styles/               tokens per concept (base.css), heroes, sections, case study
+```
 
-## Bundle contents
+How the scene stays in sync: `measureActs()` turns scroll position into a continuous `store.act` (0 = hero … 3 = contact). It plateaus while you read each section and transitions near the section boundaries. Each scene blends its four storyboard keyframes (K1–K4) by that value. Desktop hero objects are placed in 1440-mock pixel coordinates scaled by `--s`, matching the CSS. Some later-act objects are pinned to live DOM rects, such as the contact underline and the form.
 
-- `README.md` — this file
-- `chats/` — conversation transcripts (read these!)
-- `project/` — the `Syed Muhammad Hussain portfolio design` project files (HTML prototypes, assets, components)
+## Content to confirm
+
+The brief forbids invented metrics, clients and testimonials. Anything unconfirmed is written as `[VERIFY: …]` in `src/lib/content.ts` and renders as a visible chip. There are about 70 of them, covering:
+
+- years of experience, the 2023–2025 employer, location/timezone
+- each project's role, year and live URL
+- the Aerosoft Studio case study text (overview, challenge, solution, results) and its screenshots
+- the Sterlington Law and EE Glazing case-study bodies
+
+**Screenshots:** none were supplied. `Shot` in `src/sections/Projects.tsx` renders a styled placeholder; replace it with `<img>` once real images exist.
+
+## Contact form
+
+The form validates in the browser and shows errors inline with `aria-invalid` / `aria-describedby`. When `VITE_CONTACT_ENDPOINT` is set (for example a Formspree URL), it POSTs JSON there. Otherwise it opens the visitor's mail client with the message pre-filled.
+
+## Accessibility notes
+
+- Text never sits directly over bright 3D: content sits on opaque panels, and headings on the dark concepts have solid backing.
+- Captions use the darker greys from the mocks (≥ 5.9:1 on their surfaces). Lime is used as text only on dark surfaces, and only as a fill with dark text on light ones.
+- Every nav has a motion toggle. With motion off, GSAP is skipped and the canvas renders on demand, with no idle animation.
+- Visible focus states everywhere, a skip link, an Escape-closable mobile menu that returns focus, and real `<form>` controls with 44 px+ targets.
+- Case-study pages fade the WebGL layer out and stop rendering it.
+
+## Design source
+
+- `project/Portfolio Concepts.dc.html`: the exported Claude Design canvas (hero mocks and storyboards)
+- `chats/chat1.md`: the brief and the design conversation
